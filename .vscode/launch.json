@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "attach", //attach ele irá executar o debud durante a execução inciada para launch ele sempre executara a aplicação novamente.
+            "protocol": "inspector", //por estar no Node precisamos usar o inspector, além disso precisamos colocar um novo item no atalho de execução, sendo ele o --inspect
+            "restart": true,
+            "name": "Debug",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "outFiles": [
+              "${workspaceFolder}/**/*.js"
+            ]
+        }
+    ]
+}
